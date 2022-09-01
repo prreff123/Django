@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css">
+    <title>Remove Employee</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Remove An Employee!</h1>
+        <hr>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdownMenuButton1"
+                aria-expanded="true">
+                Choose Employee To Be Removed
+            </button>
+            <ul class="dropdownmenu" aria-labelledby="dropdownMenuButton1">
+                {% for emp in emps%}
+                <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

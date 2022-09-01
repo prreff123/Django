@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css">
+    <title>Add Employee</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Add An Employee!</h1>
+        <hr>
+
+        <form action="/add_emp" method="post">
+            {% csrf_token %}
+            <label for="first_name" class="fw-semibold">First Name</label> <br>
+            <input type="text" id="first_name" name="first_name" value="{{ first_name }}"> <br>
+
+            <label for="last_name" class="fw-semibold">Last Name</label> <br>
+            <input type="text" id="last_name" name="last_name" value="{{ last_name }}"> <br>
+
+            <label for="salary" class="fw-semibold">Salary</label> <br>
+            <input type="number" id="salary" name="salary" value="{{ salary }}"> <br>
+
+            <label for="dept" class="fw-semibold">Department</label> <br>
+            <input type="number" id="dept" name="dept" value="{{ dept }}"> <br>
+
+            <label for="phone" class="fw-semibold">Phone</label> <br>
+            <input type="number" id="phone" name="phone" value="{{ phone }}"> <br>
+
+            <label for="bonus" class="fw-semibold">Bonus</label> <br>
+            <input type="number" id="bonus" name="bonus" value="bonus"> <br>
+
+            <label for="role" class="fw-semibold">Role</label> <br>
+            <input type="number" id="role" name="role" value="role"> <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
